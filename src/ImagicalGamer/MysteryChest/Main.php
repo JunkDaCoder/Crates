@@ -19,6 +19,7 @@ use pocketmine\utils\TextFormat as C;
 use pocketmine\math\Vector3;
 use pocketmine\level\Level;
 use pocketmine\level\particle\FlameParticle;
+use pocketmine\level\sound\EndermanTeleportSound;
 
 /* Copyright (C) ImagicalGamer - All Rights Reserved
  * Unauthorized copying of this file, via any medium is strictly prohibited
@@ -40,7 +41,7 @@ class Main extends PluginBase implements Listener{
         if($inventory->contains(new Emerald(0,1))) {
           $event->getPlayer()->getInventory()->removeItem(Item::Get(388,0,1));
         $event->setCancelled();
-        $player->sendMessage("§l§b§7• Opening a MysteryChest...I wonder whats inside! •");
+        $player->sendMessage("§l§b§7• Opening a MysteryChest... •");
   
         $level = $player->getLevel();
         $x = $block->getX();
@@ -64,50 +65,62 @@ class Main extends PluginBase implements Listener{
         case 1:
           $inventory->addItem(Item::get(351,4,3));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 3 Lapis Lazuli§7 from a§c Vote Crate§7! •");
+           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 2:
           $inventory->addItem(Item::get(364,0,8));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 8 Steak§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;   
         case 3:
           $inventory->addItem(Item::get(266,0,3));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 3 Gold Ingots§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;   
         case 4:
           $inventory->addItem(Item::get(265,0,3));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 3 Iron Ingots§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;      
         case 5:
           $inventory->addItem(Item::get(264,0,1));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 1 Diamond§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;     
         case 6:
           $inventory->addItem(Item::get(339,100,1));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a $100§7 in MoneyNote form from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 7:
           $inventory->addItem(Item::get(112,0,16));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 16 Netherbricks§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 8:
           $inventory->addItem(Item::get(121,0,16));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 16 Endstone§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 9:
           $inventory->addItem(Item::get(307,0,1));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 1 Iron Chestplate§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 10:
           $inventory->addItem(Item::get(384,0,24));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 24 XP Bottles§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 11:
           $inventory->addItem(Item::get(388,0,1));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 1 Vote key§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 12:
           $inventory->addItem(Item::get(360,0,4));
           $this->getServer()->broadcastMesssage("§7•§b " . $player->getName() . "§7 found §a 4 Melons§7 from a§c Vote Crate§7! •");
+          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
     }
   }
