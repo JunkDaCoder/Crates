@@ -98,7 +98,7 @@ class Main extends PluginBase implements Listener{
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 1 Iron Chestplate§7 from a§c Vote Crate§7! •");
         break;
         case 10:
-          $inventory->addItem(Item::get(344,0,24));
+          $inventory->addItem(Item::get(384,0,24));
           $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 24 XP Bottles§7 from a§c Vote Crate§7! •");
         break;
         case 11:
