@@ -10,8 +10,6 @@ use pocketmine\Player;
 
 use pocketmine\event\player\PlayerInteractEvent;
 
-use pocketmine\utils\Config;
-
 use pocketmine\item\Item;
 use pocketmine\item\Emerald;
 use pocketmine\block\Block;
@@ -31,9 +29,6 @@ use pocketmine\level\particle\FlameParticle;
 class Main extends PluginBase implements Listener{
 
   public function onEnable(){
-    @mkdir($this->getDataFolder());
-    $config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
-    $config->save();
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
 
@@ -45,7 +40,7 @@ class Main extends PluginBase implements Listener{
         if($inventory->contains(new Emerald(0,1))) {
           $event->getPlayer()->getInventory()->removeItem(Item::Get(388,0,1));
         $event->setCancelled();
-        $player->sendMessage("§l§bOpening a MysteryChest...I wonder whats inside!");
+        $player->sendMessage("§l§b§7• Opening a MysteryChest...I wonder whats inside! •");
   
         $level = $player->getLevel();
         $x = $block->getX();
