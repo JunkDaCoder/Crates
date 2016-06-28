@@ -40,12 +40,13 @@ class Main extends PluginBase implements Listener{
   public function onInteract(PlayerInteractEvent $event){
     $block = $event->getBlock();
     $player = $event->getPlayer();
-    $inventory = $player->getInventory();       
+    $inventory = $player->getInventory();
       if($block->getId() === Block::CHEST){     
         if($inventory->contains(new Emerald(0,1))) {
+          $event->getPlayer()->getInventory()->removeItem(Item::Get(388,0,1));
         $event->setCancelled();
-        $player->sendMessage(C::AQUA . "Opening a MysteryChest...I wonder whats inside!");
-
+        $player->sendMessage("§l§bOpening a MysteryChest...I wonder whats inside!");
+  
         $level = $player->getLevel();
         $x = $block->getX();
         $y = $block->getY();
@@ -68,32 +69,32 @@ class Main extends PluginBase implements Listener{
         case 1:
           $inventory->addItem(Item::get(22,0,1));
           $this->getServer()->broadcastMessage("§e---[•§2Crates§e•]---");
-          $this->getServer()->broadcastMessage("§7•The player§b " . $player->getName() . "§7found §a1 Lapis Block§7!•");
+          $this->getServer()->broadcastMessage("§7• The player§b " . $player->getName() . "§7 found §a1 Lapis Block§7! •");
         break;
         case 2:
           $inventory->addItem(Item::get(364,0,8));
           $this->getServer()->broadcastMessage("§e---[•§2Crates§e•]---");
-          $this->getServer()->broadcastMessage("§7•The player§b " . $player->getName() . "§7found §a8 Steak§7!•");
+          $this->getServer()->broadcastMessage("§7• The player§b " . $player->getName() . "§7 found §a8 Steak§7! •");
         break;   
         case 3:
           $inventory->addItem(Item::get(266,0,9));
           $this->getServer()->broadcastMessage("§e---[§•2Crates§e•]---");
-          $this->getServer()->broadcastMessage("§7•The player§b " . $player->getName() . "§7found §a9 Gold Ingots§7!•");
+          $this->getServer()->broadcastMessage("§7• The player§b " . $player->getName() . "§7 found §a9 Gold Ingots§7! •");
         break;   
         case 4:
           $inventory->addItem(Item::get(265,0,7));
           $this->getServer()->broadcastMessage("§e---[•§2Crates§e•]---");
-          $this->getServer()->broadcastMessage("§7•The player§b " . $player->getName() . "§7found §a7 Iron Ingots§7!•");
+          $this->getServer()->broadcastMessage("§7• The player§b " . $player->getName() . "§7 found §a7 Iron Ingots§7! •");
         break;      
         case 5:
           $inventory->addItem(Item::get(264,0,5));
           $this->getServer()->broadcastMessage("§e--[•§2Crates§e•]---");
-          $this->getServer()->broadcastMessage("•§7The player§b " . $player->getName() . "§7found §a5 Diamonds§7!•");
+          $this->getServer()->broadcastMessage("• §7The player§b " . $player->getName() . "§7 found §a5 Diamonds§7! •");
         break;     
         case 6:
           $inventory->addItem(Item::get(339,1000,1));
           $this->getServer()->broadcastMessage("§e---[•§2Crates§e•]---");
-          $this->getServer()->broadcastMessage("•§7The player§b " . $player->getName() . "§7 found§a $1000§7 in MoneyNote form!•");
+          $this->getServer()->broadcastMessage("• §7The player§b " . $player->getName() . "§7 found§a $1000§7 in MoneyNote form! •");
         break;
     }
   }
