@@ -99,13 +99,15 @@ class Main extends PluginBase implements Listener{
           $level->addSound(new PopSound(new Vector3($x, $y + 1, $z)));
         break;
         case 7:
-          $inventory->addItem(Item::get(112,0,16));
-          $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 16 Netherbricks§7 from a§c Vote Crate§7! •");
+          $inventory->addItem(Item::get(17,0,16));
+          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b16 Oak Logs§7!");
+          $player->sendMessage("§e§lCHANCE:§r§b [3/30]");
           $level->addSound(new PopSound(new Vector3($x, $y + 1, $z)));
         break;
         case 8:
-          $inventory->addItem(Item::get(121,0,16));
-          $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 16 Endstone§7 from a§c Vote Crate§7! •");
+          $inventory->addItem(Item::get(339,1000,1));
+          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won§b$1000 in MoneyNote form§7!");
+          $player->sendMessage("§e§lCHANCE:§r§b [2/30]");
           $level->addSound(new PopSound(new Vector3($x, $y + 1, $z)));
         break;
         case 9:
