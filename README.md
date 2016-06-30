@@ -4,6 +4,6 @@
 - [ ] Balance the items
 - [ ] Make the item account alot more
 - [ ] Change the items
-- [ ] CHange the sounds from EndermanTP to Pop
+- [x] CHange the sounds from EndermanTP to Pop
 - [ ] Test v0.0.6 and make sure it's balanced
 - [ ] Fix anything after testing that's needed
