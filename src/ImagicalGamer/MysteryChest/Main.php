@@ -121,8 +121,9 @@ class Main extends PluginBase implements Listener{
           $level->addSound(new PopSound(new Vector3($x, $y + 1, $z)));
         break;
         case 11:
-          $inventory->addItem(Item::get(388,0,1));
-          $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 1 Vote key§7 from a§c Vote Crate§7! •");
+          $inventory->addItem(Item::get(388,0,2));
+          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b2 Vote Keys!");
+          $player->sendMessage("§e§lCHANCE:§r§b [1/30]");
           $level->addSound(new PopSound(new Vector3($x, $y + 1, $z)));
         break;
         case 12:
@@ -131,6 +132,9 @@ class Main extends PluginBase implements Listener{
           $level->addSound(new PopSound(new Vector3($x, $y + 1, $z)));
         break;
         case 13:
+          $inventory->addItem(Item::get(264,0,4));
+          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b4 Diamonds§7!");
+          $player->sendMessage("§e§lCHANCE:§r§b [1/30]");
           $level->addSound(new PopSound(new Vector3($x, $y + 1, $z)));
         break;
         case 14:
