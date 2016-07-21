@@ -61,7 +61,7 @@ class Main extends PluginBase implements Listener{
               $particle->setComponents($x, $y, $z);
               $level->addParticle($particle);
 }
-        $prize = rand(1,20);
+        $prize = rand(1,10);
         switch($prize){
         case 1:
           $inventory->addItem(Item::get(364,0,20));
@@ -99,9 +99,9 @@ class Main extends PluginBase implements Listener{
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;     
         case 6:
-          $inventory->addItem(Item::get(338,0,2));
+          $inventory->addItem(Item::get(388,0,2));
           $player->sendMessage("§2========");
-          $player->sendMessage("§7You won§b2 Crate Keys§7!");
+          $player->sendMessage("§7You won§b 2 Crate Keys§7!");
           $player->sendMessage("§2========");
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
