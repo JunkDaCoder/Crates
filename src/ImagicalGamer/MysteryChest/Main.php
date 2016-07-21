@@ -92,75 +92,45 @@ class Main extends PluginBase implements Listener{
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;      
         case 5:
-          $inventory->addItem(Item::get(351,4,9));
-          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b9 Lapis Lazuli§7!");
-          $player->sendMessage("§e§lCHANCE:§r§b [3/30]");
+          $inventory->addItem(Item::get(339,750,1));
+          $player->sendMessage("§2========");
+          $player->sendMessage("§7You won §b$750§7 In Money Note form!");
+          $player->sendMessage("§2========");
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;     
         case 6:
-          $inventory->addItem(Item::get(339,1000,1));
-          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b$1000 in MoneyNote form§7!");
-          $player->sendMessage("§e§lCHANCE:§r§b [2/30]");
+          $inventory->addItem(Item::get(338,0,2));
+          $player->sendMessage("§2========");
+          $player->sendMessage("§7You won§b2 Crate Keys§7!");
+          $player->sendMessage("§2========");
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 7:
           $inventory->addItem(Item::get(17,0,16));
-          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b16 Oak Logs§7!");
-          $player->sendMessage("§e§lCHANCE:§r§b [3/30]");
+          $player->sendMessage("§2========");
+          $player->sendMessage("§7You won §b16 Oak Logs§7!");
+          $player->sendMessage("§2========");
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 8:
-          $inventory->addItem(Item::get(339,1000,1));
-          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won§b$1000 in MoneyNote form§7!");
-          $player->sendMessage("§e§lCHANCE:§r§b [2/30]");
+          $inventory->addItem(Item::get(322,0,5));
+          $player->sendMessage("§2========");
+          $player->sendMessage("§7You won §b5 Golden Apples§7!");
+          $player->sendMessage("§2========");
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 9:
-          $inventory->addItem(Item::get(307,0,1));
-          $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 1 Iron Chestplate§7 from a§c Vote Crate§7! •");
+          $inventory->addItem(Item::get(384,0,20));
+          $player->sendMessage("§2========");
+          $player->sendMessage("§7You won §b20 XP Bottles§7!");
+          $player->sendMessage("§2========");
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
         case 10:
-          $inventory->addItem(Item::get(384,0,24));
-          $this->getServer()->broadcastMessage("§7•§b " . $player->getName() . "§7 found §a 24 XP Bottles§7 from a§c Vote Crate§7! •");
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 11:
-          $inventory->addItem(Item::get(388,0,2));
-          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b2 Vote Keys!");
-          $player->sendMessage("§e§lCHANCE:§r§b [1/30]");
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 12:
-          $inventory->addItem(Item::get(360,0,4));
-          $this->getServer()->broadcastMesssage("§7•§b " . $player->getName() . "§7 found §a 4 Melons§7 from a§c Vote Crate§7! •");
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 13:
-          $inventory->addItem(Item::get(264,0,4));
-          $player->sendMessage("§a§lVoteCrate§r§e>§7 You won §b4 Diamonds§7!");
-          $player->sendMessage("§e§lCHANCE:§r§b [1/30]");
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 14:
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 15:
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 16:
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 17:
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 18:
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 19:
-          $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
-        break;
-        case 20:
+          $inventory->addItem(Item::get(279,0,1));
+          $player->sendMessage("§2========");
+          $player->sendMessage("§7You won §b1 Diamond Axe§7!");
+          $player->sendMessage("§2========");
           $level->addSound(new EndermanTeleportSound(new Vector3($x, $y + 1, $z)));
         break;
     }
